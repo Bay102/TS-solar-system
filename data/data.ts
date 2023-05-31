@@ -1,4 +1,33 @@
-export const data = {
+export type Planet = {
+  id: string;
+  name: string;
+  isPlanet: boolean;
+  mass: {
+    massValue: number;
+    massExponent: number;
+  };
+  vol: {
+    volValue: number;
+    volExponent: number;
+  };
+  gravity: number;
+  avgTemp: number;
+  moonsCount?: number;
+  moons?: string[];
+}
+
+export interface Asteroid {
+  name: string;
+  discoveryYear: number;
+  orbitalPeriod: number;
+}
+
+export interface Data {
+  planets: Planet[];
+  asteroids: Asteroid[];
+}
+
+export const data: Data = {
   planets: [
     {
       id: "uranus",
